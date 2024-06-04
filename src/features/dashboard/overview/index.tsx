@@ -31,10 +31,7 @@ export function Overview() {
               </div>
 
               <Select defaultValue="light-1">
-                <SelectTrigger
-                  icon="h-[30px] w-[30px] text-red-200"
-                  className="relative w-[2rem] h-[98%] bg-primary text-white text-[30px] rounded-r-[10px] border-none focus:ring-transparent"
-                >
+                <SelectTrigger className="relative w-[2rem] h-[98%] bg-primary text-white text-[30px] rounded-r-[10px] border-none focus:ring-transparent">
                   <div className="absolute top-2.5 left-1">
                     <ChevronDown className="h-6 w-6" />
                   </div>
