@@ -7,6 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function DoughuntChart() {
   const data = {
+    labels: progressData.map((item) => item.sex),
     datasets: [
       {
         data: progressData
@@ -17,8 +18,19 @@ export function DoughuntChart() {
         borderWidth: 1,
         spacing: 15,
         borderRadius: 5,
+        legend: {
+          display: false,
+        },
       },
     ],
+  };
+
+  const options = {
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
   };
   return (
     <div>
@@ -33,7 +45,7 @@ export function DoughuntChart() {
         id="chart"
         className="h-[16.854375rem] w-full flex justify-center mt-4 relative"
       >
-        <Doughnut data={data} />
+        <Doughnut data={data} options={options} />
 
         <div className="absolute inset-y-[40%]">
           <p className="text-center text-[#545454] font-bs-semi-bold text-2xl">
